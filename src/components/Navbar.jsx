@@ -1,18 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../assets/logo.png";
 import { FaBars, FaTimes } from "react-icons/fa";
 
+import "../style/navbar.css";
+
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+  const handleOnClick = () => setClick(!click);
+
   return (
     <header>
       <nav className="navbar">
         <div className="logo">
-          <Link to="/">
-            <img src={Logo} alt="website-logo" />
-          </Link>
+          <img src={Logo} width={120} alt="website-logo" />
         </div>
-        <ul className="nav-menu">
+
+        <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-link">
               Home
@@ -39,8 +43,8 @@ const Navbar = () => {
             </Link>
           </li>
         </ul>
-        <div className="hamburger">
-          <FaBars />
+        <div className="hamburger" onClick={handleOnClick}>
+          {click ? <FaTimes size={20} /> : <FaBars size={20} />}
         </div>
       </nav>
     </header>
