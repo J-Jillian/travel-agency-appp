@@ -1,0 +1,61 @@
+.hero {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: azure;
+  height: 80vh;
+  width: 100%;
+  position: relative;
+  margin-bottom: 4rem;
+}
+
+.hero:before {
+  content: "";
+  background: url("../assets/mount-hood.jpg") no-repeat center center/cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero .hero-content {
+  height: 100%;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  padding: 1rem;
+}
+
+.hero h1 {
+  font-size: 5rem;
+  margin-top: 9rem;
+}
+
+.hero p {
+  margin-top: -2rem;
+}
+
+.ham-logo {
+  visibility: hidden;
+}
+
+.logo {
+  margin: 2rem;
+}
+
+@media screen and (max-width: 960px) {
+  .hero h1 {
+    font-size: 3rem;
+    text-align: center;
+  }
+
+  .hero p {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .hero-content {
+    width: 350px;
+    text-align: center;
+  }
+}

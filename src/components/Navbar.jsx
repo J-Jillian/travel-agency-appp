@@ -12,34 +12,39 @@ const Navbar = () => {
   return (
     <header>
       <nav className="navbar">
-        <div className="logo">
-          <img src={Logo} width={120} alt="website-logo" />
-        </div>
-
+        <img src={Logo} className="ham-logo" alt="website-logo" />
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              Home
+              HOME
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              Destinos
+              NOSOTROS
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              Grupos
+              DESTINOS
+            </Link>
+          </li>
+          <div className="logo">
+            <img src={Logo} width={120} alt="website-logo" />
+          </div>
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
+              GRUPOS
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              About
+              F&Q
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              Contacto
+              CONTACTO
             </Link>
           </li>
         </ul>
