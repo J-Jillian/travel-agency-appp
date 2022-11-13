@@ -16,12 +16,7 @@ const Navbar = () => {
         <ul className={click ? "nav-menu active" : "nav-menu"}>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              HOME
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link to="/" className="nav-link">
-              NOSOTROS
+              OREGÓN
             </Link>
           </li>
           <li className="nav-item">
@@ -29,8 +24,13 @@ const Navbar = () => {
               DESTINOS
             </Link>
           </li>
+          <li className="nav-item">
+            <Link to="/" className="nav-link">
+              VIAJES PERSONALIZADOS
+            </Link>
+          </li>
           <div className="logo">
-            <img src={Logo} width={120} alt="website-logo" />
+            <img to="/" src={Logo} width={120} alt="website-logo" />
           </div>
           <li className="nav-item">
             <Link to="/" className="nav-link">
@@ -39,12 +39,12 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              F&Q
+              AVENTURA
             </Link>
           </li>
           <li className="nav-item">
             <Link to="/" className="nav-link">
-              CONTACTO
+              RSC
             </Link>
           </li>
         </ul>
